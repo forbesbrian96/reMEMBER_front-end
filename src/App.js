@@ -26,7 +26,7 @@ const App = () => {
   const handleUpdate = (editClient) => {
     console.log(editClient)
     axios
-    .put('http://localhost:8080/clients' + editClient.id, editClient)
+    .put('http://localhost:8080/clients/' + editClient.id, editClient)
     .then((response) => {
       getClient()
     })
@@ -34,9 +34,12 @@ const App = () => {
 
   const handleDelete = (event) => {
     axios
-    .delete('http://localhost:8080/clients' + event.target.value)
+    .delete('http://localhost:8080/clients/' + event.id)
     .then((response) => {
       getClient()
+    })
+    .catch((err) => {
+      console.log(err);
     })
   }
 
@@ -73,7 +76,7 @@ const App = () => {
         </ul>
         <Edit client={client} handleUpdate={handleUpdate} />
         <button onClick={() => {
-          handleDelete(client.id)
+          handleDelete(client)
         }}
         >Remove Client</button>
         </div>
