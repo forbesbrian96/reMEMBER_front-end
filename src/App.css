@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #FB8B24;
+  background-image: linear-gradient(to bottom right, #5F0F40, #9A031E, #FB8B24, #ffc914);
   color: #001524;
 }
 
@@ -10,25 +10,49 @@ body {
   width: 100%;
   justify-content: center;
   font-family: 'Poltawski Nowy', serif;
-  font-size: 4em;
+  font-size: 5em;
+  text-shadow: 7px 7px 7px #5F0F40;
+  color: #283d4c;
+}
+
+.re-box {
+  color: #e6e6e6;
+}
+
+.colon {
+  color: black;
 }
 
 .client-card {
   display: flex;
   flex-direction: column;
   padding-left: 5%;
-  border: 5px solid #9A031E;
-  border-radius: 2px;
+  border: 6px solid #9A031E;
+  border-radius: 4px;
   background-color: #E36414;
   margin: 5% auto;
-  box-shadow: 9px 7px 8px #5F0F40;
-  width: 50%;
+  box-shadow: 17px 17px 15px #5F0F40;
+  width: 60%;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .add-form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  align-items: center;
+  width: 30%;
   background-color: #ffc914;
+  border: 6px solid #9A031E;
+  border-radius: 4px;
+  box-shadow: 17px 17px 15px #5F0F40;
 }
 
 li {

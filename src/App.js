@@ -78,12 +78,14 @@ const App = () => {
     <>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;500&family=Poltawski+Nowy&display=swap');
     </style>
 
     <div className="body-card"> 
 
-    <h1 className="title">re:MEMEBER</h1>
+    <h1 className="title">
+      <div className="re-box">re</div>
+      <div className="colon">:</div>MEMEBER</h1>
 
       {/*TERNERY - Maps through the clients, and reads their display States. If set to false, it will just show the name, and 
       next appointment. If true, it will show the entire Client.js file */}
