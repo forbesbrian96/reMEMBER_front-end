@@ -4,23 +4,17 @@ const Client = (props) => {
     return (
         <>
          <h3>{props.client.name}</h3>
-        <ul>
-          <li>
-            {props.client.nextAppt}
-          </li>
-          <li>
-            {props.client.serviceNeeded}
-          </li>
-          <li>
-            {props.client.serviceOffered}
-          </li>
-          <li>
-            {props.client.clientKnowledge}
-          </li>
-          <li>
-            {props.client.continuedConversation}
-          </li>
-        </ul>
+       
+         <h5>Next Appointment: {props.client.nextAppt}</h5>
+         
+         <h5>Service Needed: {props.client.serviceNeeded}</h5>
+        
+         <h5>Services Offered: {props.client.serviceOffered}</h5>
+       
+         <h5>Client Knowledge: {props.client.clientKnowledge}</h5>
+       
+         <h5>Continued Conversation: {props.client.continuedConversation}</h5>
+       
         </>
     )
 }

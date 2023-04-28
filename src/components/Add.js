@@ -28,52 +28,56 @@ const Add = ({ handleCreate }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add New Client</h2>
-      <div>
-        <label>Name:</label>
-        <input
-          type="text"
-          onChange={(event) => setName(event.target.value)}
-        />
+    <>
+      <div className="add-form">
+        <form onSubmit={handleSubmit}>
+          <h2>Add New Client</h2>
+          <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              onChange={(event) => setName(event.target.value)}
+            />
+          </div>
+          <div>
+            <label>Next Appointment:</label>
+            <input
+              type="text"
+              onChange={(event) => setNextAppt(event.target.value)}
+            />
+          </div>
+          <div>
+            <label>Service Needed:</label>
+            <input
+              type="text"
+              onChange={(event) => setServiceNeeded(event.target.value)}
+            />
+          </div>
+          <div>
+            <label>Services Offered:</label>
+            <input
+              type="text"
+              onChange={(event) => setServiceOffered(event.target.value)}
+            />
+          </div>
+          <div>
+            <label>Client Knowledge:</label>
+            <input
+              type="text"
+              onChange={(event) => setClientKnowledge(event.target.value)}
+            />
+          </div>
+          <div>
+            <label>Continued Conversation:</label>
+            <input
+              type="text"
+              onChange={(event) => setContinuedConversation(event.target.value)}
+            />
+          </div>
+          <button type="submit">Add Client</button>
+        </form>
       </div>
-      <div>
-        <label>Next Appointment:</label>
-        <input
-          type="text"
-          onChange={(event) => setNextAppt(event.target.value)}
-        />
-      </div>
-      <div>
-        <label>Service Needed:</label>
-        <input
-          type="text"
-          onChange={(event) => setServiceNeeded(event.target.value)}
-        />
-      </div>
-      <div>
-        <label>Services Offered:</label>
-        <input
-          type="text"
-          onChange={(event) => setServiceOffered(event.target.value)}
-        />
-      </div>
-      <div>
-        <label>Client Knowledge:</label>
-        <input
-          type="text"
-          onChange={(event) => setClientKnowledge(event.target.value)}
-        />
-      </div>
-      <div>
-        <label>Continued Conversation:</label>
-        <input
-          type="text"
-          onChange={(event) => setContinuedConversation(event.target.value)}
-        />
-      </div>
-      <button type="submit">Add Client</button>
-    </form>
+    </>
   );
 };
 

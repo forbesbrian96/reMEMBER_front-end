@@ -1,11 +1,47 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #bce0fd;
-  color: #011627;
+  background-color: #FB8B24;
+  color: #001524;
 }
 
-.client-box {
-  background-color: #00d9c0;
-  gap: 15px;
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family: 'Poltawski Nowy', serif;
+  font-size: 4em;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  border: 5px solid #9A031E;
+  border-radius: 2px;
+  background-color: #E36414;
+  margin: 5% auto;
+  box-shadow: 9px 7px 8px #5F0F40;
+  width: 50%;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffc914;
+}
+
+li {
+  list-style-type: none;
+}
+
+.button-box {
+  display: flex;
+  height: 2em;
+  margin-bottom: 8px;
+}
+
+button {
+  width: 100px;
+  height: 3em;
 }

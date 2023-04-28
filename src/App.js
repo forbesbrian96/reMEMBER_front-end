@@ -77,22 +77,33 @@ const App = () => {
   return (
     <>
 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap');
+    </style>
+
+    <div className="body-card"> 
+
+    <h1 className="title">re:MEMEBER</h1>
+
       {/*TERNERY - Maps through the clients, and reads their display States. If set to false, it will just show the name, and 
       next appointment. If true, it will show the entire Client.js file */}
       <ul>
         {client.map((client, i) => (
           <li key={i}>
-            <div className="client-box">
+            <div className="client-card">
             {client.display ? (
               <>
                 {/*Client component*/} 
                 <Client client={client} />
                 {/*Edit form*/}
                 <Edit client={client} handleUpdate={handleUpdate} />
+                <br/>
+                <div className="button-box">
                 {/*Delete button*/}
                 <button onClick={() => handleDelete(client)}>Remove Client</button>
                 {/*Fewer details - Triggers the displayToggle, to switch display State to 'false'*/}
                 <button onClick={() => displayToggle(client.id)}>Fewer Details</button>
+                </div>
               </>
             ) : (
               <>
@@ -112,6 +123,8 @@ const App = () => {
       <br/>
       {/*ADD FORM*/}
       <Add handleCreate={handleCreate} />
+
+      </div>
 
     </>
   );
