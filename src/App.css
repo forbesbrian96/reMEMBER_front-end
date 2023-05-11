@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to bottom right, #5F0F40, #9A031E, #FB8B24, #ffc914);
+  background-size: cover;
   color: #001524;
 }
 

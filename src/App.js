@@ -20,7 +20,7 @@ const App = () => {
 
   //CREATE ROUTE
   const handleCreate = (addClient) => {
-    axios.post("http://localhost:8080/clients", addClient).then((response) => {
+    axios.post("https://powerful-badlands-84110.herokuapp.com/clients", addClient).then((response) => {
       console.log(response);
       getClient();
     });
@@ -28,7 +28,7 @@ const App = () => {
 
   //GET ROUTE
   const getClient = () => {
-    axios.get("http://localhost:8080/clients").then(
+    axios.get("https://powerful-badlands-84110.herokuapp.com/clients").then(
       (response) => setClient(response.data),
       (err) => console.log(err)
     );
@@ -38,7 +38,7 @@ const App = () => {
   const handleUpdate = (editClient) => {
     console.log(editClient);
     axios
-      .put("http://localhost:8080/clients/" + editClient.id, editClient)
+      .put("https://powerful-badlands-84110.herokuapp.com/clients/" + editClient.id, editClient)
       .then((response) => {
         getClient();
       });
@@ -47,7 +47,7 @@ const App = () => {
   //DELETE ROUTE
   const handleDelete = (event) => {
     axios
-      .delete("http://localhost:8080/clients/" + event.id)
+      .delete("https://powerful-badlands-84110.herokuapp.com/clients/" + event.id)
       .then((response) => {
         getClient();
       })
